@@ -28,4 +28,5 @@ public:
     }
 };
 
-//Runtime: O(n)
+//Time complexity: O(n)
+//Space complecity: O(n)

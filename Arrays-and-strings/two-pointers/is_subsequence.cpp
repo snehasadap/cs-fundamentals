@@ -13,7 +13,7 @@ bool isSubsequence(string s, string t){
             j++; //increment t pointer to search for characters equal to s[i]
         }
     }
-    return i == s.size(); //if the value of i after loop doesn't equal the size of s, that means not all elements were found, so the function will return false. otherwise, it will return true
+    return i == s.size(); //if the length of the substring after loop doesn't equal its original size, that means not all elements were found, so the function will return false. otherwise, it will return true
 }
 
 //time complexity: O(1)

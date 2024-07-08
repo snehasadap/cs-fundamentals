@@ -1,4 +1,4 @@
-//reverse a string in place. use two pointers, one starting on left and the other on the right. to "reverse" the string, you swap the characters
+//reverse a string in place. use two pointers, one starting on left and the other on the right. to "reverse" the string, you swap the left and right indices
 
 class Solution {
 public:

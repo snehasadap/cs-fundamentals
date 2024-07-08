@@ -19,7 +19,7 @@ vector<int> combine(vector<int>& arr1, vector<int>& arr2) { //returrn type is ar
         }
     }
 
-    //after while loop, one of these arrays will be exhausted but the other one will not be. we need to iterate both lists until all elements from both lists are included in ans
+    //after while loop, one of these arrays will be exhausted but the other one will not be. we need to iterate over both lists until all elements from both lists are included in ans
     while (i < arr1.size()){
         ans.push_back(arr1[i]);
         i++;

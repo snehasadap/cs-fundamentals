@@ -3,6 +3,7 @@
 //result: [4, 9, 25, 36, 49, 100]
 //brute force: iterate through the entire list and return the squares of each value. Runtime: (O(nlogn)) 
 //Better approach: use two pointers to evaluate the absolute value of the left and right values and determine which one is greater. 
+//ref back to combine.cpp to see how to sort a given array with two pointers
 
 class Solution {
 public:

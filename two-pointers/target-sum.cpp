@@ -1,6 +1,6 @@
 
 
-//returns true if there are two integers in which their sum = target number, returns false otherwise
+//returns true if there are two integers in which their sum = target, returns false otherwise. unlike two sum, both of these lists are already sorted
 //Ex: [1, 3, 6, 7, 8] target: 13
 //    returns True
 //    [1, 4, 5, 6, 7] target: 21
@@ -26,6 +26,6 @@ bool CheckForTarget{vector<int>& nums, int target}{ //takes in an sorted array o
     return False; //returns false after loop finishes executing,
 }
 
-//basic gist: declare pointers, start logic, then increase/decrement pointers at the end. 
+//basic gist: declare pointers, start logic, then decrement pointers at the end of the loop 
 //space complexity: O(1)
 //time complexity: O(n)

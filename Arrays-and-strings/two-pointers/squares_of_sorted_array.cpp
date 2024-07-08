@@ -7,8 +7,8 @@
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> result(n);
+        int n = nums.size(); 
+        vector<int> result(n); //output will be same size as input so we can establish the size as n
         
         int left = 0;
         int right = nums.size() - 1;

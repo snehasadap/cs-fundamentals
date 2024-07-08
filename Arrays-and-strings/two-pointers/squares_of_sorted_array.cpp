@@ -17,7 +17,7 @@ public:
             int square;
             if (abs(nums[left]) < abs(nums[right])){ //if right index is greater, this will be the first value to be added to the result, and vice-versa for left
                 square = nums[right]; //assigns the value to be squared
-                right--; //decrement right index to compare next value to left
+                right--; //decrement right index to compare next value to left index, which will remain the same
             } else{ //left value is greater
                 square = nums[left];
                 left++; //increment left index if left value is greater

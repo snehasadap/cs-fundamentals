@@ -4,8 +4,7 @@
 //    arr2: [1, 4, 6, 9]
 //    ans: [1, 3, 4, 5, 6, 7, 8, 9]
 
-//Brute force: combine both lists and call sort() function. However, time complexity is O(n * logn(n)) due to runtime of sort() function
-
+//Brute force: combine both lists and call sort() function. However, time complexity is O(n * logn(n)) due to runtime of sort()
 vector<int> combine(vector<int>& arr1, vector<int>& arr2) { //returrn type is arr1 and arr2 combined in ascending order. arr1 and arr2 are already sorted
     vector<int> = ans; //declaring empty array
     i = 0; //pointer for arr1 and arr2 start at the beginning 

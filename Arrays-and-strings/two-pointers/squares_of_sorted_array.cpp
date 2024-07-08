@@ -1,4 +1,4 @@
-//takes in an array, sorted in non-decreasing order, and returns the square.
+//takes in an array, sorted in non-decreasing order, and returns the squares.
 //Ex: [-5, -3, 2, 6, 7, 9, 10]
 //result: [4, 9, 25, 36, 49, 100]
 //brute force: iterate through the entire list and return the squares of each value. Runtime: (O(nlogn)) 

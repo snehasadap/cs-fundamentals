@@ -26,25 +26,32 @@ Explanation: The only possible triplet sums up to 0. */
 
 class Solution {
 public:
-    vector<vector<int>> threeSum(vector<int>& nums) { 
-        sort(nums.begin(), nums.end()); //we will begin by sorting the list so it will easier to iterate through. also, it's safe to say that since the list is sorted, there will be no repetitions
-        int k = nums.size() - 1; //initialization of the end pointer will be outside of the loop since remains fixed
-        vector<vector<int>> result; //initialize empty array and return the result at the end
-        for (int i = 0; i < nums.size() - 2; i++) { //we will nums.size() - 2 since there is no point in iterating the last 2 elements since the result won't return a triplet
-            int j = i + 1; //points to value after i
-            while (j < k) { //two pointer logic comes into place
-                if (nums[i] + nums[j] + nums[k] == 0) { //checking if the sum of the 3 current values equal to 0, then we have one of our solutions
-                    result.push_back({nums[i], nums[j], nums[k]}); 
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        sort(nums.begin() , nums.end());     //Sorted Array
+        if(nums.size() < 3){                // Base Case 1
+            return {};
+        }
+        if(nums[0] > 0){                    // Base Case 2
+            return {};
+        }
+        unordered_map<int , int> hashMap;
+        for(int i = 0 ; i < nums.size() ; ++i){     //Hashing of Indices
+            hashMap[nums[i]] = i;
+        }
+        vector<vector<int>> answer;
+        for(int i = 0 ; i < nums.size() - 2 ; ++i){     //Traversing the array to fix the number. Except for last 2 elements otherwise we won't have a triplet
+            if(nums[i] > 0){     //If number fixed is +ve, stop there because we can't make it zero by searching after it.
+                break;
+            }
+            for(int j = i + 1 ; j < nums.size() - 1 ; ++j){     //Fixing another number after first number
+                int required = -1*(nums[i] + nums[j]);    //To make sum 0, we would require the -ve sum of both fixed numbers.
+                if(hashMap.count(required) && hashMap.find(required)->second > j){ //If it exists in hashmap and its last occurrence index > 2nd fixed index, we found our triplet.
+                    answer.push_back({nums[i] , nums[j] , required});
                 }
-                if (nums[i] + nums[j] + nums[k] < 0) { //if the sum of the three is less than zero, we will incrememnt the pointer the left hand side to receive a larger value
-                    j++; 
-                } else {
-                    k--; //if the sum is greater than zero, then we will decrement the pointer on the right hand side 
-                } 
-            } // this loop will keep repeating until all elements are iterated through
-        } //start with the next fixed pointer
-        return result;
+                j = hashMap.find(nums[j])->second; //Update j to last occurence of 2nd fixed number to avoid duplicate triplets.
+            }
+            i = hashMap.find(nums[i])->second;     //Update i to last occurence of 1st fixed number to avoid duplicate triplets.
+        }
+        return answer;  //Return answer vector.
     }
 };
-
-//time complexity: O(n^2)

@@ -42,8 +42,8 @@ public:
 
             // count consecutive occurrences of letter in input vector
             while (i < chars.size() && chars[i] == letter) {
-                ++count;
-                ++i; //increment i here so that in the outer while loop it will start with the next letter
+                count++;
+                i++; //increment i here so that in the outer while loop it will start with the next letter
             }
 
             // write letter to compressed vector

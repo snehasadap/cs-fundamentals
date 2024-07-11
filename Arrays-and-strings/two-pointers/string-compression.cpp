@@ -43,7 +43,7 @@ public:
             // count consecutive occurrences of letter in input vector
             while (i < chars.size() && chars[i] == letter) {
                 count++;
-                i++; //increment i here so that in the outer while loop it will start with the next letter
+                i++; //increment i here so that in the outer while loop it will start with the next letter. it is noted that the i++ is here and not in the initialization of the for loop. if you need to pick up after a specific index, you can also implement i++ within your loop, depending on the program's logic
             }
 
             // write letter to compressed vector

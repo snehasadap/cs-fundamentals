@@ -3,10 +3,10 @@
 int findLength(vector<int>& nums, int k) {
     // curr is the current sum of the window
     int left = 0, curr = 0, ans = 0;
-    for (int right = 0; right < nums.size(); right++) {
+    for (int right = 0; right < nums.size(); right++) { //we declare right pointer at beginning and start expanding it
         curr += nums[right];
         while (curr > k) {
-            curr -= nums[left];
+            curr -= nums[left]; //if the curr is > k, we will drop an element from the window on the lefthand side, aka "sliding" the window to till the end of the array
             left++;
         }
         

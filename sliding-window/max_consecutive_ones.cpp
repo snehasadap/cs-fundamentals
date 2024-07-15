@@ -33,7 +33,10 @@ public:
                 }
                 left++;
             }
-            ans = max(ans, right - left + 1); //so if the zero_count < k, your left will stay the same. so in the iterations before the number of zeros in the window gets exceeded, your left index will be the same, only thing is that the difference between the right and the left grows larger. THEN, once the number of zeroes gets exceeded, that is when the while loop comes in to update the left pointer. this will execute after the while loop, but the size of the original window will still be the max.
+            ans = max(ans, right - left + 1); /*so if the zero_count < k, your left will stay the same. 
+                                              so in the iterations before the number of zeros in the window gets exceeded, your left index will be the same, only thing is that the difference between the right and the left grows larger. 
+                                               THEN, once the number of zeroes gets exceeded, that is when the while loop comes in to update the left pointer. 
+                                               this will execute after the while loop, but the size of the original window will still be the max. */
         }
         return ans;
     }

@@ -27,11 +27,11 @@ public:
             if (nums[right] == 0) {
                 zero_count++;
             }
-            while (zero_count > k) {
+            while (zero_count > k) { //this will only execute one the zero_count is greater than k, meaning that that your current window is no longer valid. 
                 if (nums[left] == 0) {
-                    zero_count--;
+                    zero_count--; //keep decrementing zero_count until the numbers of zeros is less than k. then, we can the window again.
                 }
-                left++;
+                left++; //when do our next iteration, we will start with the index after the last dropped zero
             }
             ans = max(ans, right - left + 1); /*so if the zero_count < k, your left will stay the same. 
                                               so in the iterations before the number of zeros in the window gets exceeded, your left index will be the same, only thing is that the difference between the right and the left grows larger. 

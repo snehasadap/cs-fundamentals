@@ -5,6 +5,9 @@
 //Better approach: use two pointers to evaluate the absolute value of the left and right values and determine which one is greater. 
 //ref back to combine.cpp to see how to sort a given array with two pointers
 
+//Ex: [-7, -6, 2, 3, 4]
+//squared result: [4, 9, 16, 36, 49]
+
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {

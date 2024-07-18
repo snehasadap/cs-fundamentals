@@ -38,7 +38,7 @@ public:
             charMap[currentChar]++; //creates char key and adds 1 to that key. you are going to find a moment where the currentchar is already in the hashmap, so now second while loop will execute
 
             while (charMap[currentChar] > 1) {
-                charMap[s[left]]--; //clear the hashmap by removing the count. so for all characters, the count is going to be one, so the count will be zero 
+                charMap[s[left]]--; //clear the hashmap by removing the count of each key. so for all characters, the count is going to be one, so the count will be zero 
                 if (charMap[s[left]] == 0) { //if the count is zero, we will remove that value from the hashmap aka clear the hashmap of all existing values except for the value that we will starting off with in the next iteration
                     charMap.erase(s[left]); //clearing each element of hashmap
                 }

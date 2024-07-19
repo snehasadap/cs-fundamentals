@@ -16,8 +16,11 @@ Output: 1
 Example 3:
 
 Input: target = 11, nums = [1,1,1,1,1,1,1,1]
-Output: 0 */
+Output: 0 
 
+target: 4
+[1, 1, 4, 3]
+output: 2 ([1, 4]) */
 
 class Solution {
 public:

@@ -45,7 +45,7 @@ public:
                 left++; // Move the left pointer to curr right value of ptr
             }
 
-            ans = max(ans, right - left + 1); //return max string
+            ans = max(ans, right - left + 1); //return max string. the max is calculated before the while loop runs. the while loop is executed once the window is no longer valid
             right++;
 
         }

@@ -28,8 +28,9 @@ public:
         //create an outside loop. if the total sum of the array is less than the target, then result is zero
         int sum = 0;
         int left = 0;
-        int ans = INT_MAX; //it is not zero because if it was, then the output will always be zero
-        
+        int ans = INT_MAX; //it's not zero because if it was, then the output will always be zero
+
+        //if total sum of array is < target, that means there are no valid subarrays, so we return zero
         for (int i = 0; i < nums.size(); i++){
             sum += nums[i];
         }
@@ -37,6 +38,8 @@ public:
         if (sum < target){
             return 0;
         }
+
+        //clear sum to start main logic
         sum = 0;
 
         for(int right = 0; right < nums.size(); right++){

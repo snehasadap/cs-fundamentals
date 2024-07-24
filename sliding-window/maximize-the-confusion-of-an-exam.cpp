@@ -31,6 +31,8 @@ In both cases, there are five consecutive 'T's.
 
 */
 
+//use hashMap to store values of T and F to track count, then calculate the max. the min of the two elements will be the value associated with k, which we will then use the count to check whether not it exceeds k
+
 class Solution {
 public:
     int maxConsecutiveAnswers(string answerKey, int k) {
